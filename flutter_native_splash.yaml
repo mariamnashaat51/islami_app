@@ -1,0 +1,14 @@
+flutter_native_splash:
+  color: "#202020"
+
+  image: "assets/images/image_splash_screen.png"
+
+  branding: "assets/images/img_branding_islami_app.png"
+
+  #! ANDROID 12+ configuration:
+  android_12:
+    color: "#202020"
+
+    image: "assets/images/image_splash_screen.png"
+
+    branding: "assets/images/img_branding_islami_app.png"
