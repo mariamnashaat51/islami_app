@@ -10,4 +10,9 @@ class AppAssets {
   static const String iconSebha = 'assets/images/ic_sebha.png';
   static const String iconRadio = 'assets/images/ic_radio.png';
   static const String iconTime = 'assets/images/ic_time.png';
+  static const String intoImage1 = 'assets/images/intro_1.png';
+  static const String intoImage2 = 'assets/images/intro_2.png';
+  static const String intoImage3 = 'assets/images/intro_3.png';
+  static const String intoImage4 = 'assets/images/intro_4.png';
+  static const String intoImage5 = 'assets/images/intro_5.png';
 }
