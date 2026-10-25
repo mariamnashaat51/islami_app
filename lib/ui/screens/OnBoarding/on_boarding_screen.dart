@@ -3,6 +3,7 @@ import 'package:introduction_screen/introduction_screen.dart';
 import 'package:islami_app/core/utils/app_assets.dart';
 import 'package:islami_app/core/utils/app_colors.dart';
 import 'package:islami_app/core/utils/app_routes.dart';
+import 'package:islami_app/core/utils/app_styles.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -90,10 +91,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
         done: _builtText(data: 'Finish'),
 
-        controlsPadding: const EdgeInsets.symmetric(
-          horizontal: 16,
-          vertical: 16,
-        ),
+        controlsPadding: EdgeInsets.symmetric(vertical: widthScreen * 0.03),
 
         dotsDecorator: const DotsDecorator(
           size: Size(7, 7),
@@ -109,14 +107,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   }
 
   Widget _builtText({required String data}) {
-    return Text(
-      data,
-      style: TextStyle(
-        color: goldColor,
-        fontSize: 16,
-        fontWeight: FontWeight.w700,
-      ),
-    );
+    return Text(data, style: AppStyles.bold16Primary);
   }
 
   void _finishOnBoarding() {
@@ -145,22 +136,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
           Text(
             data,
-            style: const TextStyle(
-              color: goldColor,
-              fontSize: 24,
-              fontWeight: FontWeight.w700,
-            ),
+            style: AppStyles.bold24Primary,
             textAlign: TextAlign.center,
           ),
 
           if (detailsData.isNotEmpty)
             Text(
               detailsData,
-              style: const TextStyle(
-                color: goldColor,
-                fontSize: 20,
-                fontWeight: FontWeight.w700,
-              ),
+              style: AppStyles.bold20Primary,
               textAlign: TextAlign.center,
             ),
         ],

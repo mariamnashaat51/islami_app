@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/utils/app_assets.dart';
 import 'package:islami_app/core/utils/app_colors.dart';
+import 'package:islami_app/core/utils/app_size_utils.dart';
+import 'package:islami_app/core/utils/app_styles.dart';
 import 'package:islami_app/ui/screens/home/tabs/hadith/hadith_tab.dart';
 import 'package:islami_app/ui/screens/home/tabs/quran/quran_tab.dart';
 import 'package:islami_app/ui/screens/home/tabs/radio/radio_tab.dart';
@@ -48,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: BottomNavigationBar(
           selectedItemColor: AppColors.whiteAppColor,
           unselectedItemColor: AppColors.blackAppColor,
+          selectedLabelStyle: AppStyles.bold12White,
           currentIndex: selectedIndex,
           onTap: (index) {
             selectedIndex = index;
@@ -94,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           SafeArea(
             child: Column(
-              spacing: 20,
+              spacing: context.height * 0.02,
               children: [
                 Image.asset(AppAssets.logo),
                 Expanded(child: tabsList[selectedIndex]),
