@@ -5,14 +5,14 @@ import 'package:islami_app/core/utils/app_styles.dart';
 import 'package:islami_app/model/quran_resources.dart';
 
 class SuraItem extends StatelessWidget {
-  int index;
+  final int index;
 
-  SuraItem({super.key, required this.index});
+  const SuraItem({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
     double width = context.width;
-    double height = context.height;
+    // double height = context.height;
     return Row(
       spacing: width * 0.04,
       children: [

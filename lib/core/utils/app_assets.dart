@@ -21,4 +21,11 @@ class AppAssets {
   static const String mostRecent = 'assets/images/img_most_recent.png';
   static const String bySuraDetailsScreen =
       'assets/images/bg_sura_details_screen.png';
+  static const String byHadithCard =
+      'assets/images/bg_hadith_details_screen_all.png';
+  static const String sebhaAll = 'assets/images/sebha_all.png';
+
+  static const String sebhaBody = 'assets/images/sebha_body.png';
+
+  static const String sebha = 'assets/images/sebha.png';
 }

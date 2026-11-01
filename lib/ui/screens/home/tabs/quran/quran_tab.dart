@@ -32,11 +32,13 @@ class QuranTab extends StatelessWidget {
           _builtSearchSection(),
           Text('Most Recently', style: AppStyles.bold16White),
           MostRecentlyWidget(),
-          Text('Suras List', style: AppStyles.bold16White),
+          Text('quran List', style: AppStyles.bold16White),
           _builtSuraListSection(
             onSuraItemTap: (index) {
-              Navigator.of(context)
-                  .pushNamed(AppRoutes.suraDetailsRouteName, arguments: index);
+              Navigator.of(context).pushNamed(
+                AppRoutes.suraDetailsTogetherRouteName,
+                arguments: index,
+              ); // Container
             },
           ),
         ],
