@@ -74,22 +74,20 @@ class _HadithItemState extends State<HadithItem> {
                       bottom: height * 0.1,
                     ),
                     child: Column(
+                      spacing: height * 0.01,
                       children: [
                         Text(
                           hadithResources?.title ?? '',
-                          style: AppStyles.bold24black,
+                          style: AppStyles.bold24Black,
                           textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: 12),
                         Expanded(
-                          child: SingleChildScrollView(
-                            child: Text(
-                              hadithResources?.content ?? '',
-                              style: AppStyles.bold16black,
-                              textAlign: TextAlign.center,
-                              textDirection: TextDirection.rtl,
-                              strutStyle: const StrutStyle(height: 1.5),
-                            ),
+                          child: Text(
+                            hadithResources?.content ?? '',
+                            style: AppStyles.bold16Black,
+                            textAlign: TextAlign.center,
+                            textDirection: TextDirection.rtl,
+                            strutStyle: const StrutStyle(height: 1.5),
                           ),
                         ),
                       ],

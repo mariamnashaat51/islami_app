@@ -32,6 +32,12 @@ class AppStyles {
     color: AppColors.whiteAppColor,
     fontFamily: 'Janna',
   );
+  static TextStyle bold32White = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 32,
+    color: AppColors.whiteAppColor,
+    fontFamily: 'Janna',
+  );
   static TextStyle bold36White = TextStyle(
     fontWeight: FontWeight.w700,
     fontSize: 36,
@@ -44,19 +50,37 @@ class AppStyles {
     color: AppColors.whiteAppColor,
     fontFamily: 'Janna',
   );
-  static TextStyle bold24black = TextStyle(
+  static TextStyle bold24Black = TextStyle(
     fontWeight: FontWeight.w700,
     fontSize: 24,
     color: AppColors.blackAppColor,
     fontFamily: 'Janna',
   );
-  static TextStyle bold16black = TextStyle(
+  static TextStyle bold20Black = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 20,
+    color: AppColors.blackAppColor,
+    fontFamily: 'Janna',
+  );
+  static TextStyle bold20LightBlack = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 20,
+    color: AppColors.lightBlackAppColor,
+    fontFamily: 'Janna',
+  );
+  static TextStyle bold16LightBlack = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 16,
+    color: AppColors.lightBlackAppColor,
+    fontFamily: 'Janna',
+  );
+  static TextStyle bold16Black = TextStyle(
     fontWeight: FontWeight.w700,
     fontSize: 16,
     color: AppColors.blackAppColor,
     fontFamily: 'Janna',
   );
-  static TextStyle bold14black = TextStyle(
+  static TextStyle bold14Black = TextStyle(
     fontWeight: FontWeight.w700,
     fontSize: 14,
     color: AppColors.blackAppColor,
@@ -72,6 +96,12 @@ class AppStyles {
     fontWeight: FontWeight.w700,
     fontSize: 14,
     color: AppColors.whiteAppColor,
+    fontFamily: 'Janna',
+  );
+  static TextStyle bold16Azkar = TextStyle(
+    fontWeight: FontWeight.w700,
+    fontSize: 14,
+    color: AppColors.azkarAppColor,
     fontFamily: 'Janna',
   );
 }

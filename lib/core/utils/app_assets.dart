@@ -24,8 +24,11 @@ class AppAssets {
   static const String byHadithCard =
       'assets/images/bg_hadith_details_screen_all.png';
   static const String sebhaAll = 'assets/images/sebha_all.png';
-
   static const String sebhaBody = 'assets/images/sebha_body.png';
-
   static const String sebha = 'assets/images/sebha.png';
+  static const String radioContainerBg = 'assets/images/radio_container_bg.png';
+  static const String radioContainerWaveBg =
+      'assets/images/radio_container_bg_wave.png';
+  static const String azkarImage1 = 'assets/images/e.png';
+  static const String azkarImage2 = 'assets/images/m.png';
 }

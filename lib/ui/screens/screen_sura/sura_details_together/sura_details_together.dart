@@ -5,8 +5,10 @@ import 'package:islami_app/core/utils/app_colors.dart';
 import 'package:islami_app/core/utils/app_size_utils.dart';
 import 'package:islami_app/core/utils/app_styles.dart';
 import 'package:islami_app/model/quran_resources.dart';
+import 'package:islami_app/providers/most_recent_provider.dart';
 import 'package:islami_app/ui/screens/screen_sura/sura_details/sura_content.dart';
 import 'package:islami_app/ui/screens/screen_sura/sura_details_1/sura_content_1.dart';
+import 'package:provider/provider.dart';
 
 class SuraDetailsTogether extends StatefulWidget {
   const SuraDetailsTogether({super.key});
@@ -20,10 +22,20 @@ class _SuraDetailsTogetherState extends State<SuraDetailsTogether> {
   bool showVerses = true;
   String content = '';
   int? selectedVerseIndex;
+  late MostRecentProvider mostRecentProvider;
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    // TODO: update
+    mostRecentProvider.getLastSuraIndex();
+  }
 
   @override
   Widget build(BuildContext context) {
     int index = ModalRoute.of(context)?.settings.arguments as int;
+    mostRecentProvider = Provider.of<MostRecentProvider>(context);
     if (verses.isEmpty) {
       loadSuraFile(index);
     }
