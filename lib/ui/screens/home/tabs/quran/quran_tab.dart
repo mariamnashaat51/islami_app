@@ -6,9 +6,8 @@ import 'package:islami_app/core/utils/app_routes.dart';
 import 'package:islami_app/core/utils/app_size_utils.dart';
 import 'package:islami_app/core/utils/app_styles.dart';
 import 'package:islami_app/model/quran_resources.dart';
+import 'package:islami_app/ui/screens/home/tabs/quran/widget/most_recently_widget.dart';
 import 'package:islami_app/ui/screens/home/tabs/quran/widget/sura_item.dart';
-
-import 'widget/most_recently_widget.dart';
 
 /*
 width = 430
@@ -82,45 +81,42 @@ class _QuranTabState extends State<QuranTab> {
   Widget _builtSuraListSection({required void Function(int) onSuraItemTap}) {
     return filterList.isEmpty
         ? Center(
-      child: Text(
-        'No Sura name found!',
-        style: AppStyles.bold24Primary,
-      ),
-    )
+            child: Text('No Sura name found!', style: AppStyles.bold24Primary),
+          )
         : ListView.separated(
-      physics: NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      itemBuilder: (context, index) {
-        return InkWell(
-          onTap: () {
-            // TODO: save sura index in shared prefs
-            saveLastSuraIndex(filterList[index]);
-            // TODO: navigate to sura details screen
-            onSuraItemTap(filterList[index]);
-          },
-          child: SuraItem(index: filterList[index]),
-        );
-      },
-      separatorBuilder: (context, index) {
-        return Divider(
-          height: context.height * 0.02,
-          thickness: 1,
-          color: AppColors.whiteAppColor,
-          indent: context.width * 0.14,
-          endIndent: context.width * 0.14,
-        );
-      },
-      itemCount: filterList.length,
-      // itemCount: QuranResources.versesNumbersList.length, //114
-    );
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return InkWell(
+                onTap: () {
+                  // TODO: save sura index in shared prefs
+                  saveLastSuraIndex(filterList[index]);
+                  // TODO: navigate to sura details screen
+                  onSuraItemTap(filterList[index]);
+                },
+                child: SuraItem(index: filterList[index]),
+              );
+            },
+            separatorBuilder: (context, index) {
+              return Divider(
+                height: context.height * 0.02,
+                thickness: 1,
+                color: AppColors.whiteAppColor,
+                indent: context.width * 0.14,
+                endIndent: context.width * 0.14,
+              );
+            },
+            itemCount: filterList.length,
+            // itemCount: QuranResources.versesNumbersList.length, //114
+          );
   }
 
   void searchBySuraName(String searchText) {
     List<int> searchList = [];
     for (int i = 0; i < QuranResources.versesNumbersList.length; i++) {
       if (QuranResources.englishQuranSuraList[i].toLowerCase().contains(
-        searchText.toLowerCase(),
-      ) ||
+            searchText.toLowerCase(),
+          ) ||
           QuranResources.arabicQuranSuraList[i].contains(searchText)) {
         searchList.add(i);
       }
